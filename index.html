@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script  src="app.js"></script>
+</head>
+<body ng-app="app">
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+      
+    
+
+<div class="angular-wrapper">
+  <h1>Angular JS - File Download Directive</h1>
+  <h3>Angular Directive that uses HTML5 "download" attribute to download a file. On non-supported browser (e.g. IE, Safari), the hyperlink URL will trigger the browser default download behaviour.</h3>
+  
+  Select the file to download:
+  
+  <select ng-model="selectedFile">
+    <option value="http://images6.fanpop.com/image/photos/32600000/Sydney-sydney-new-south-whales-australia-32662723-1440-900.jpg">Sydney Australia (JPG)</option>
+    <option value="https://www.toureast.com.au/pdf/TEsightseeing.pdf" linktext="Download PDF - Austrlaia Sightseeing">Australia Sightseeing (PDF)</option>
+    <option value="https://www.studyandwork.com.au/files/Casual_Work_Resume.doc">Casual Work Resume (DOC)</option>
+  </select>
+  
+  <p>
+    <strong>You have selected:</strong> {{ selectedFile }}
+    <br/>
+<!--    <file-download fileurl="{{ selectedFile }}" linktext="Click to download"></file-download>-->
+      <button type="button" class="btn btn-success"><file-download fileurl="{{ selectedFile }}" linktext="Click to download"></file-download></button>
+  </p>
+</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
